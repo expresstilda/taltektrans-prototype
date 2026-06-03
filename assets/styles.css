@@ -1,0 +1,228 @@
+/* ТалТЭК Транс — прототип сайта. Прото-уровень: структура + контент.
+   Цвета и шрифты приближены к брендбуку, финальный дизайн — за дизайнером. */
+
+:root{
+  --navy:#0A2A5E;       /* глубокий синий (фоны) */
+  --navy-2:#0E3A7A;
+  --blue:#1F62B5;       /* основной акцент */
+  --blue-br:#2E7BD6;    /* светлый акцент */
+  --gold:#E2A23B;       /* зерновое направление */
+  --ink:#1A2330;        /* текст */
+  --muted:#5B6B82;
+  --line:#D9E1EC;
+  --bg:#F4F7FB;
+  --white:#fff;
+  --radius:14px;
+  --maxw:1180px;
+  --shadow:0 6px 28px rgba(13,42,94,.08);
+  --font:-apple-system,"Segoe UI",Roboto,Arial,sans-serif;
+}
+
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{font-family:var(--font);color:var(--ink);background:var(--white);line-height:1.55;font-size:17px;-webkit-font-smoothing:antialiased}
+a{color:var(--blue);text-decoration:none}
+img{max-width:100%;display:block}
+.container{max-width:var(--maxw);margin:0 auto;padding:0 24px}
+section{padding:72px 0}
+h1,h2,h3,h4{line-height:1.15;font-weight:800;letter-spacing:-.01em;color:var(--ink)}
+h1{font-size:clamp(32px,5vw,56px)}
+h2{font-size:clamp(26px,3.4vw,40px)}
+h3{font-size:22px}
+.lead{font-size:clamp(18px,2vw,22px);color:var(--muted);font-weight:400}
+.eyebrow{display:inline-block;font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--blue);margin-bottom:14px}
+.muted{color:var(--muted)}
+.center{text-align:center}
+.narrow{max-width:760px}
+.mt8{margin-top:8px}.mt16{margin-top:16px}.mt24{margin-top:24px}.mt40{margin-top:40px}
+
+/* ---------- ПРОТОТИП-плашка ---------- */
+.proto-bar{background:repeating-linear-gradient(45deg,#1a2330,#1a2330 14px,#222c3b 14px,#222c3b 28px);color:#fff;font-size:13px;letter-spacing:.04em;text-align:center;padding:7px 16px}
+.proto-bar b{color:var(--gold)}
+
+/* ---------- Кнопки ---------- */
+.btn{display:inline-flex;align-items:center;gap:9px;font-weight:700;font-size:16px;padding:14px 26px;border-radius:10px;border:2px solid transparent;cursor:pointer;transition:.18s;white-space:nowrap}
+.btn-primary{background:var(--blue);color:#fff}
+.btn-primary:hover{background:var(--navy-2)}
+.btn-ghost{background:transparent;border-color:rgba(255,255,255,.55);color:#fff}
+.btn-ghost:hover{background:rgba(255,255,255,.12)}
+.btn-outline{background:#fff;border-color:var(--line);color:var(--ink)}
+.btn-outline:hover{border-color:var(--blue);color:var(--blue)}
+.btn-sm{padding:10px 18px;font-size:14px}
+
+/* ---------- Хедер ---------- */
+.header{position:sticky;top:0;z-index:50;background:rgba(255,255,255,.96);backdrop-filter:blur(8px);border-bottom:1px solid var(--line)}
+.header .row{display:flex;align-items:center;gap:28px;height:74px}
+.brand{display:flex;align-items:center;gap:11px;font-weight:800;letter-spacing:.02em;color:var(--navy)}
+.brand .mark{width:40px;height:34px;flex:none}
+.brand .wm{font-size:20px;line-height:1}
+.brand .wm small{display:block;font-size:11px;letter-spacing:.34em;font-weight:700;color:var(--blue)}
+.nav{display:flex;gap:6px;margin-left:auto}
+.nav a{padding:9px 14px;border-radius:8px;color:var(--ink);font-weight:600;font-size:15px}
+.nav a:hover{background:var(--bg);color:var(--blue)}
+.nav a.active{color:var(--blue);background:#EAF1FB}
+.header .tools{display:flex;align-items:center;gap:12px}
+.lk{position:relative}
+.badge{display:inline-block;font-size:10px;font-weight:700;letter-spacing:.04em;background:var(--gold);color:#3a2a06;border-radius:20px;padding:2px 8px;vertical-align:middle;margin-left:7px;text-transform:uppercase}
+.lang{font-size:14px;font-weight:700;color:var(--muted)}
+.lang b{color:var(--ink)}
+.burger{display:none;flex-direction:column;gap:5px;background:none;border:0;cursor:pointer;padding:8px}
+.burger span{width:24px;height:2px;background:var(--ink);display:block}
+
+/* ---------- Плейсхолдеры медиа ---------- */
+.ph{position:relative;border:2px dashed #9db3d0;border-radius:12px;background:
+   repeating-linear-gradient(45deg,#eef3fa,#eef3fa 12px,#e6edf7 12px,#e6edf7 24px);
+   display:flex;flex-direction:column;align-items:center;justify-content:center;gap:8px;
+   color:#48618a;text-align:center;padding:24px;min-height:180px}
+.ph .tag{font-weight:800;letter-spacing:.06em;font-size:15px;color:var(--navy)}
+.ph .sub{font-size:13px;max-width:420px;color:#5d7398}
+.ph .ico{font-size:30px;line-height:1}
+.ph-video{min-height:360px}
+.ratio-16x9{aspect-ratio:16/9;min-height:0}
+.ratio-4x3{aspect-ratio:4/3;min-height:0}
+.ratio-1x1{aspect-ratio:1/1;min-height:0}
+
+/* ---------- Hero ---------- */
+.hero{position:relative;color:#fff;background:linear-gradient(120deg,var(--navy),var(--navy-2));overflow:hidden}
+.hero .ph{position:absolute;inset:0;border-radius:0;border:0;background:
+   linear-gradient(120deg,rgba(8,28,66,.55),rgba(14,58,122,.35)),
+   repeating-linear-gradient(45deg,#13315f,#13315f 18px,#16386b 18px,#16386b 36px);
+   color:#cfe0f6;opacity:1;z-index:0}
+.hero-cap{position:absolute;top:14px;left:50%;transform:translateX(-50%);z-index:3;max-width:90%;text-align:center;font-size:12px;font-weight:600;letter-spacing:.03em;color:#bcd4f2;background:rgba(8,24,54,.55);border:1px solid rgba(255,255,255,.18);padding:7px 16px;border-radius:30px}
+.hero .inner{position:relative;z-index:2;padding:104px 0 96px;max-width:760px}
+.hero .ribbon{display:inline-block;font-size:14px;font-weight:700;letter-spacing:.02em;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);padding:8px 16px;border-radius:40px;margin-bottom:22px}
+.hero h1{color:#fff}
+.hero p{font-size:clamp(17px,2vw,21px);color:#d6e2f4;margin-top:18px;max-width:600px}
+.hero .cta{display:flex;gap:14px;flex-wrap:wrap;margin-top:34px}
+.hero .media-note{position:absolute;right:20px;bottom:16px;z-index:3;font-size:12px;color:#a9c2e6;background:rgba(8,24,54,.6);padding:6px 12px;border-radius:8px;border:1px solid rgba(255,255,255,.15)}
+
+/* page hero (внутренние) */
+.phero{background:linear-gradient(120deg,var(--navy),var(--navy-2));color:#fff;padding:64px 0}
+.phero h1{color:#fff}
+.phero p{color:#d6e2f4;margin-top:12px;max-width:680px}
+.crumbs{font-size:13px;color:#9fbbe4;margin-bottom:14px}
+.crumbs a{color:#cfe0f6}
+
+/* ---------- Сетки/карточки ---------- */
+.grid{display:grid;gap:24px}
+.g2{grid-template-columns:repeat(2,1fr)}
+.g3{grid-template-columns:repeat(3,1fr)}
+.g4{grid-template-columns:repeat(4,1fr)}
+.card{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:26px;transition:.18s}
+.card:hover{box-shadow:var(--shadow);border-color:#c3d3e8}
+.card h3{margin-bottom:10px}
+.card .ico-circle{width:52px;height:52px;border-radius:12px;background:#EAF1FB;color:var(--blue);display:flex;align-items:center;justify-content:center;font-size:24px;margin-bottom:16px}
+.card ul{list-style:none;margin-top:12px}
+.card ul li{padding-left:26px;position:relative;margin:8px 0;color:var(--muted)}
+.card ul li::before{content:"✓";position:absolute;left:0;color:var(--blue);font-weight:800}
+.tile-soft{background:var(--bg);border-color:transparent}
+
+.section-bg{background:var(--bg)}
+.section-navy{background:linear-gradient(120deg,var(--navy),var(--navy-2));color:#fff}
+.section-navy h2,.section-navy h3{color:#fff}
+.section-navy .lead{color:#cfe0f6}
+
+/* ---------- Цифры ---------- */
+.stats{display:grid;grid-template-columns:repeat(3,1fr);gap:30px 40px}
+.stat .num{font-size:clamp(34px,4vw,52px);font-weight:800;letter-spacing:-.02em;line-height:1;color:#fff}
+.stat .num .u{font-size:14px;font-weight:700;color:#9fc0ee;display:block;letter-spacing:.08em;margin-bottom:6px}
+.stat .lbl{margin-top:12px;color:#bcd0ee;font-size:15px;border-top:2px solid rgba(255,255,255,.18);padding-top:10px;display:inline-block}
+.stats.on-light .stat .num{color:var(--navy)}
+.stats.on-light .stat .num .u{color:var(--blue)}
+.stats.on-light .stat .lbl{color:var(--muted);border-color:var(--line)}
+
+/* парк вагонов */
+.fleet{display:grid;grid-template-columns:1.3fr 1fr;gap:24px}
+.fleet .big{background:linear-gradient(150deg,#0c2c60,#103e80);color:#fff;border-radius:18px;padding:34px}
+.fleet .big .n{font-size:clamp(48px,8vw,86px);font-weight:800;line-height:.95;letter-spacing:-.03em}
+.fleet .col{display:grid;gap:24px}
+.fleet .mini{border-radius:18px;padding:26px}
+.fleet .mini.dark{background:#0f2f63;color:#fff}
+.fleet .mini.light{background:var(--bg);color:var(--ink)}
+.fleet .mini .n{font-size:clamp(34px,5vw,50px);font-weight:800;letter-spacing:-.02em}
+.fleet .mini .cap{font-weight:700;font-size:15px;opacity:.85}
+
+/* ---------- Процесс «под ключ» ---------- */
+.steps{counter-reset:s;display:grid;grid-template-columns:repeat(3,1fr);gap:22px}
+.step{background:#fff;border:1px solid var(--line);border-radius:var(--radius);padding:24px;position:relative}
+.step::before{counter-increment:s;content:counter(s,decimal-leading-zero);font-weight:800;font-size:15px;color:#fff;background:var(--blue);width:38px;height:38px;border-radius:10px;display:flex;align-items:center;justify-content:center;margin-bottom:14px}
+.step h4{font-size:17px;margin-bottom:6px}
+.step p{color:var(--muted);font-size:15px}
+
+/* ---------- Вагоны ---------- */
+.vagons{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.vagon{border:1px solid var(--line);border-radius:var(--radius);overflow:hidden;background:#fff;display:flex;flex-direction:column}
+.vagon .ph{border:0;border-radius:0;border-bottom:1px dashed #9db3d0}
+.vagon .body{padding:20px}
+.vagon h3{font-size:19px}
+.vagon .spec{list-style:none;margin-top:12px;font-size:14px}
+.vagon .spec li{display:flex;justify-content:space-between;gap:12px;padding:7px 0;border-top:1px solid var(--line);color:var(--muted)}
+.vagon .spec li b{color:var(--ink);font-weight:700;text-align:right}
+.chip{display:inline-block;font-size:11px;font-weight:800;letter-spacing:.05em;text-transform:uppercase;padding:4px 10px;border-radius:20px;background:#EAF1FB;color:var(--blue)}
+.chip.new{background:var(--gold);color:#3a2a06}
+.chip.tbd{background:#eef0f3;color:#7a8699}
+
+/* ---------- Форма ---------- */
+.form-wrap{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:start}
+.form{background:#fff;border:1px solid var(--line);border-radius:18px;padding:32px;box-shadow:var(--shadow)}
+.field{margin-bottom:18px}
+.field label{display:block;font-weight:600;font-size:14px;margin-bottom:7px}
+.field .req{color:#c0392b}
+.field input,.field select,.field textarea{width:100%;padding:13px 14px;border:1.5px solid var(--line);border-radius:10px;font:inherit;font-size:15px;background:#fff;color:var(--ink)}
+.field input:focus,.field select:focus,.field textarea:focus{outline:0;border-color:var(--blue)}
+.field textarea{min-height:110px;resize:vertical}
+.f2{display:grid;grid-template-columns:1fr 1fr;gap:18px}
+.consent{display:flex;gap:10px;font-size:13px;color:var(--muted);align-items:flex-start}
+.consent input{width:auto;margin-top:3px}
+
+/* контактные карточки людей */
+.person{display:flex;gap:16px;align-items:center;background:#fff;border:1px solid var(--line);border-radius:14px;padding:18px}
+.person .ava{width:64px;height:64px;border-radius:12px;flex:none;border:2px dashed #9db3d0;background:#eef3fa;display:flex;align-items:center;justify-content:center;color:#7c93b6;font-size:12px;text-align:center;font-weight:700}
+.person .role{font-size:13px;color:var(--muted)}
+.person .who{font-weight:700}
+.person .links{font-size:14px;margin-top:6px}
+.person .links a{margin-right:14px;font-weight:600}
+
+.offices{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}
+.office{border:1px solid var(--line);border-radius:12px;padding:18px}
+.office .city{font-weight:700}
+.office.main{border-color:var(--blue);background:#F3F8FF}
+.office .tel{color:var(--blue);font-weight:700;margin-top:4px}
+
+/* ---------- Аннотации (заметки дизайнеру) ---------- */
+.note{position:relative;background:#FFF7DF;border:1px solid #F0D98A;border-left:5px solid var(--gold);border-radius:10px;padding:14px 16px 14px 44px;font-size:14px;color:#5b4a16;margin:18px 0}
+.note::before{content:"📌";position:absolute;left:14px;top:13px;font-size:16px}
+.note b{color:#3f340d}
+.note.compact{margin:14px 0}
+
+/* ---------- Лента CTA ---------- */
+.cta-band{background:linear-gradient(120deg,var(--blue),var(--navy-2));color:#fff;border-radius:20px;padding:48px;display:flex;align-items:center;justify-content:space-between;gap:30px;flex-wrap:wrap}
+.cta-band h2{color:#fff}
+.cta-band p{color:#dbe7f8;margin-top:8px}
+
+/* ---------- Футер ---------- */
+.footer{background:#0A1F44;color:#c4d4ec;padding:56px 0 28px;font-size:15px}
+.footer .cols{display:grid;grid-template-columns:1.4fr 1fr 1fr 1.2fr;gap:32px}
+.footer h4{color:#fff;font-size:15px;letter-spacing:.04em;text-transform:uppercase;margin-bottom:14px}
+.footer a{color:#c4d4ec;display:block;margin:7px 0}
+.footer a:hover{color:#fff}
+.footer .brand .wm{color:#fff}
+.footer .brand small{color:#9fc0ee}
+.footer .bottom{border-top:1px solid rgba(255,255,255,.12);margin-top:36px;padding-top:20px;display:flex;justify-content:space-between;gap:16px;flex-wrap:wrap;color:#8aa3c8;font-size:13px}
+
+/* ---------- Адаптив ---------- */
+@media(max-width:980px){
+  .nav{display:none;position:absolute;top:74px;left:0;right:0;flex-direction:column;background:#fff;border-bottom:1px solid var(--line);padding:12px}
+  .nav.open{display:flex}
+  .burger{display:flex;margin-left:auto}
+  .header .tools .lang{display:none}
+  .g3,.g4,.vagons,.steps,.offices,.stats{grid-template-columns:repeat(2,1fr)}
+  .fleet,.form-wrap{grid-template-columns:1fr}
+}
+@media(max-width:620px){
+  section{padding:52px 0}
+  .g2,.g3,.g4,.vagons,.steps,.offices,.stats,.f2{grid-template-columns:1fr}
+  .cta-band{padding:30px}
+  .footer .cols{grid-template-columns:1fr 1fr}
+  .hero .inner{padding:72px 0 64px}
+}

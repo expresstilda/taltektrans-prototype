@@ -1,0 +1,215 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>ТалТЭК Транс — железнодорожный оператор · ПРОТОТИП</title>
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+
+<div class="proto-bar">ПРОТОТИП · версия для согласования структуры и текстов · <b>дизайн будет разработан отдельно</b></div>
+
+<!-- ХЕДЕР -->
+<header class="header">
+  <div class="container row">
+    <a class="brand" href="index.html">
+      <svg class="mark" viewBox="0 0 48 40" aria-hidden="true">
+        <polygon points="24,1 47,39 1,39" fill="#9DAABC"/>
+        <polygon points="24,12 38,39 10,39" fill="#1F62B5"/>
+        <rect x="18" y="30" width="12" height="9" fill="#0A2A5E"/>
+      </svg>
+      <span class="wm">ТАЛТЭК<small>ТРАНС</small></span>
+    </a>
+    <button class="burger" aria-label="Меню"><span></span><span></span><span></span></button>
+    <nav class="nav">
+      <a class="active" href="index.html">Главная</a>
+      <a href="about.html">О компании</a>
+      <a href="services.html">Услуги и подвижной состав</a>
+      <a href="contacts.html">Контакты</a>
+    </nav>
+    <div class="tools">
+      <span class="lang"><b>RU</b> / EN</span>
+      <a class="btn btn-outline btn-sm lk" href="#" data-stub="Личный кабинет — в стадии разработки.">Личный кабинет<span class="badge">в разработке</span></a>
+    </div>
+  </div>
+</header>
+
+<!-- HERO -->
+<section class="hero">
+  <div class="ph"></div>
+  <div class="hero-cap">▶ ПЛЕЙСХОЛДЕР · ФОНОВОЕ ВИДЕО — десктоп: видео (движение состава / погрузка в порту) · мобайл/медленный интернет: фото-постер</div>
+  <div class="container">
+    <div class="inner">
+      <span class="ribbon">Мы не ждём лучших времён — создаём их сами</span>
+      <h1>Доставим ваш груз по всей сети&nbsp;1520 — надёжно и в&nbsp;срок</h1>
+      <p>ТалТЭК Транс — железнодорожный оператор с собственным парком более 13&nbsp;800 вагонов. Подаём вагоны под погрузку, берём на себя экспедирование и круглосуточно сопровождаем перевозку «под ключ».</p>
+      <div class="cta">
+        <a class="btn btn-primary" href="contacts.html#form">Оставить запрос</a>
+        <a class="btn btn-ghost" href="services.html">Услуги и парк вагонов</a>
+      </div>
+    </div>
+  </div>
+  <div class="media-note">📌 Адаптивный hero: видео → фото при медленном соединении</div>
+</section>
+
+<div class="container">
+  <div class="note">Тексты переписаны от лица клиента и без избытка «мы / наши» — по замечанию с созвона. Корпоративный девиз вынесен в строку над заголовком, описание услуг — «товаром лицом».</div>
+</div>
+
+<!-- ЧТО МЫ ДЕЛАЕМ -->
+<section>
+  <div class="container">
+    <div class="center narrow" style="margin:0 auto 44px">
+      <span class="eyebrow">Чем мы полезны</span>
+      <h2>Полный цикл железнодорожной логистики</h2>
+      <p class="lead mt16">Вам не нужно собирать перевозку из разных подрядчиков — вагоны, документы, оплата тарифов и контроль в пути уже внутри одной услуги.</p>
+    </div>
+    <div class="grid g3">
+      <div class="card">
+        <div class="ico-circle">🚃</div>
+        <h3>Подача вагонов под погрузку</h3>
+        <p class="muted">Подбираем подвижной состав под ваш груз и организуем подачу и уборку вагонов.</p>
+        <ul>
+          <li>подбор подвижного состава под задачу</li>
+          <li>работа с владельцами путей общего и необщего пользования</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="ico-circle">📦</div>
+        <h3>Экспедирование грузов</h3>
+        <p class="muted">Берём на себя финансы и оформление, чтобы груз ехал без задержек.</p>
+        <ul>
+          <li>оплата и оформление ж/д тарифов</li>
+          <li>круглосуточное диспетчерское сопровождение</li>
+        </ul>
+      </div>
+      <div class="card">
+        <div class="ico-circle">🔑</div>
+        <h3>Перевозка «под ключ»</h3>
+        <p class="muted">От разработки маршрута до уведомления о прибытии — всё в одном окне.</p>
+        <ul>
+          <li>маршрут, схема погрузки и крепления</li>
+          <li>контроль и отслеживание груза в пути</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- НОМЕНКЛАТУРА -->
+<section class="section-bg">
+  <div class="container">
+    <span class="eyebrow">Что возим</span>
+    <h2>Перевозки по номенклатуре грузов</h2>
+    <div class="grid g3 mt40">
+      <div class="card tile-soft">
+        <span class="chip new">Новое · 2026</span>
+        <h3 class="mt16">Зерно и аграрные грузы</h3>
+        <p class="muted">Запускаем направление хопперов-зерновозов: бережная перевозка зерна с сохранностью груза.</p>
+        <div class="ph ratio-4x3 mt16"><div class="ico">🖼</div><div class="tag">ФОТО · хоппер-зерновоз</div><div class="sub">рекоменд. кадр будет от съёмки нового парка</div></div>
+      </div>
+      <div class="card tile-soft">
+        <h3>Промышленные грузы</h3>
+        <p class="muted">Уголь, инертные и навалочные грузы в полувагонах — основной профиль компании.</p>
+        <div class="ph ratio-4x3 mt16"><div class="ico">🖼</div><div class="tag">ФОТО · полувагоны</div><div class="sub">DSC08533 / DSC08604 — состав с логотипом</div></div>
+      </div>
+      <div class="card tile-soft">
+        <h3>Пищевые, лесные и прочие</h3>
+        <p class="muted">Перевозки в крытых вагонах. По IV кв. 2025: пищевые 61,3% · лесные 20,9% · прочие 17,8%.</p>
+        <div class="ph ratio-4x3 mt16"><div class="ico">🖼</div><div class="tag">ФОТО · крытый вагон</div><div class="sub">DSC08492 — крытые вагоны на путях</div></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ЦИФРЫ (тизер) -->
+<section class="section-navy">
+  <div class="container">
+    <span class="eyebrow" style="color:#9fc0ee">Коротко о масштабе</span>
+    <h2>ТалТЭК Транс в цифрах</h2>
+    <div class="stats mt40">
+      <div class="stat"><div class="num"><span class="u">подвижной состав в управлении</span>13 832</div><div class="lbl">вагона в собственном парке</div></div>
+      <div class="stat"><div class="num"><span class="u">грузооборот 2010–2025</span>200 млн+</div><div class="lbl">тонно-км</div></div>
+      <div class="stat"><div class="num"><span class="u">в год</span>160 000+</div><div class="lbl">вагоноотправок</div></div>
+      <div class="stat"><div class="num"><span class="u">на рынке</span>15+ лет</div><div class="lbl">опыта в ж/д логистике</div></div>
+      <div class="stat"><div class="num"><span class="u">команда</span>~80</div><div class="lbl">профессионалов своего дела</div></div>
+      <div class="stat"><div class="num"><span class="u">присутствие</span>6</div><div class="lbl">территорий: Москва, СПб, Бийск, Новокузнецк, Иркутск, Новосибирск</div></div>
+    </div>
+    <div class="note" style="margin-top:30px">Цифры показаны статично, без «бегущих» счётчиков — по предпочтению клиента. Анимацию набора можно включить опционально на усмотрение дизайнера.</div>
+  </div>
+</section>
+
+<!-- ГЕОГРАФИЯ -->
+<section>
+  <div class="container">
+    <div class="grid g2" style="align-items:center">
+      <div>
+        <span class="eyebrow">География</span>
+        <h2>Работаем на всём пространстве колеи&nbsp;1520</h2>
+        <p class="lead mt16">Все территории РФ, страны СНГ, Балтии и Средней Азии. Ключевые направления — порты Балтики, Юга и Дальнего Востока.</p>
+        <ul class="card ul mt24" style="border:0;padding:0">
+          <li class="muted">Усть-Луга · Кандалакша · Тамань</li>
+          <li class="muted">Дальний Восток · страны Средней Азии</li>
+          <li class="muted">стабильное вагонообразование на ЗСЖД</li>
+        </ul>
+        <a class="btn btn-outline mt24" href="about.html#geo">Схема направлений</a>
+      </div>
+      <div class="ph ratio-4x3"><div class="ico">🗺</div><div class="tag">ПЛЕЙСХОЛДЕР · карта направлений</div><div class="sub">интерактивная или статичная карта с метками городов и плечами перевозок</div></div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section style="padding-top:0">
+  <div class="container">
+    <div class="cta-band">
+      <div>
+        <h2>Нужно перевезти груз по железной дороге?</h2>
+        <p>Оставьте запрос — подберём подвижной состав и рассчитаем решение под вашу задачу.</p>
+      </div>
+      <a class="btn btn-primary" style="background:#fff;color:var(--navy)" href="contacts.html#form">Оставить запрос</a>
+    </div>
+  </div>
+</section>
+
+<!-- ФУТЕР -->
+<footer class="footer">
+  <div class="container">
+    <div class="cols">
+      <div>
+        <a class="brand" href="index.html" style="color:#fff">
+          <svg class="mark" viewBox="0 0 48 40" aria-hidden="true"><polygon points="24,1 47,39 1,39" fill="#9DAABC"/><polygon points="24,12 38,39 10,39" fill="#2E7BD6"/><rect x="18" y="30" width="12" height="9" fill="#0A1F44"/></svg>
+          <span class="wm">ТАЛТЭК<small>ТРАНС</small></span>
+        </a>
+        <p style="margin-top:16px;max-width:280px">Железнодорожный оператор Группы компаний ТАЛТЭК. Перевозка промышленных и аграрных грузов.</p>
+      </div>
+      <div>
+        <h4>Разделы</h4>
+        <a href="index.html">Главная</a>
+        <a href="about.html">О компании</a>
+        <a href="services.html">Услуги и подвижной состав</a>
+        <a href="contacts.html">Контакты</a>
+      </div>
+      <div>
+        <h4>Контакты</h4>
+        <a href="tel:+74959001095">+7 (495) 900 10 95</a>
+        <a href="#" data-stub="Это прототип — переход к карте/сайту будет на готовом сайте.">Главный офис · Москва</a>
+        <a href="contacts.html#form">Оставить запрос</a>
+      </div>
+      <div>
+        <h4>Личный кабинет</h4>
+        <a href="#" data-stub="Личный кабинет — в стадии разработки.">Вход <span class="badge">в разработке</span></a>
+        <p style="margin-top:10px;font-size:13px">Новый домен проекта — <b style="color:#fff">.pro</b></p>
+      </div>
+    </div>
+    <div class="bottom">
+      <span>© 2026 АО «ТалТЭК Транс». Прототип сайта.</span>
+      <span><a href="#" data-stub="Заглушка прототипа." style="display:inline">Политика конфиденциальности</a> · taltektrans.pro</span>
+    </div>
+  </div>
+</footer>
+
+<script src="assets/script.js"></script>
+</body>
+</html>

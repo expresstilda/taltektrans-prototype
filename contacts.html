@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Контакты — ТалТЭК Транс · ПРОТОТИП</title>
+<link rel="stylesheet" href="assets/styles.css">
+</head>
+<body>
+
+<div class="proto-bar">ПРОТОТИП · версия для согласования структуры и текстов · <b>дизайн будет разработан отдельно</b></div>
+
+<header class="header">
+  <div class="container row">
+    <a class="brand" href="index.html">
+      <svg class="mark" viewBox="0 0 48 40" aria-hidden="true"><polygon points="24,1 47,39 1,39" fill="#9DAABC"/><polygon points="24,12 38,39 10,39" fill="#1F62B5"/><rect x="18" y="30" width="12" height="9" fill="#0A2A5E"/></svg>
+      <span class="wm">ТАЛТЭК<small>ТРАНС</small></span>
+    </a>
+    <button class="burger" aria-label="Меню"><span></span><span></span><span></span></button>
+    <nav class="nav">
+      <a href="index.html">Главная</a>
+      <a href="about.html">О компании</a>
+      <a href="services.html">Услуги и подвижной состав</a>
+      <a class="active" href="contacts.html">Контакты</a>
+    </nav>
+    <div class="tools">
+      <span class="lang"><b>RU</b> / EN</span>
+      <a class="btn btn-outline btn-sm lk" href="#" data-stub="Личный кабинет — в стадии разработки.">Личный кабинет<span class="badge">в разработке</span></a>
+    </div>
+  </div>
+</header>
+
+<section class="phero">
+  <div class="container">
+    <div class="crumbs"><a href="index.html">Главная</a> / Контакты</div>
+    <h1>Контакты</h1>
+    <p>Оставьте запрос через форму или свяжитесь с коммерческим департаментом и диспетчерами напрямую.</p>
+  </div>
+</section>
+
+<!-- ФОРМА -->
+<section id="form">
+  <div class="container">
+    <span class="eyebrow">Обращение</span>
+    <h2>Оставить запрос</h2>
+    <div class="note">Вместо трёх отдельных почт (pv@/kv@/zv@) — одна форма с выбором типа вагона. Запрос автоматически уходит ответственному за направление. Слово «<b>запрос</b>», а не «заявка»: заявка в бизнесе — это уже конкретный объём и маршрут.</div>
+
+    <div class="form-wrap mt24">
+      <form class="form" id="request-form">
+        <div class="f2">
+          <div class="field"><label>Имя <span class="req">*</span></label><input type="text" placeholder="Как к вам обращаться" required></div>
+          <div class="field"><label>Компания</label><input type="text" placeholder="Название организации"></div>
+        </div>
+        <div class="f2">
+          <div class="field"><label>Телефон <span class="req">*</span></label><input type="tel" placeholder="+7 ___ ___ __ __" required></div>
+          <div class="field"><label>E-mail для ответа</label><input type="email" placeholder="name@company.ru"></div>
+        </div>
+        <div class="f2">
+          <div class="field">
+            <label>Тип подвижного состава <span class="req">*</span></label>
+            <select required>
+              <option value="" selected disabled>Выберите тип вагона</option>
+              <option>Полувагон</option>
+              <option>Крытый вагон</option>
+              <option>Хоппер-зерновоз</option>
+              <option>Не знаю / нужна консультация</option>
+            </select>
+          </div>
+          <div class="field"><label>Направление</label><input type="text" placeholder="Откуда → куда"></div>
+        </div>
+        <div class="field"><label>Комментарий</label><textarea placeholder="Груз, объём, желаемые сроки"></textarea></div>
+        <label class="consent"><input type="checkbox" required> <span>Согласен на обработку персональных данных и с политикой конфиденциальности.</span></label>
+        <button class="btn btn-primary mt16" type="submit" style="width:100%;justify-content:center">Отправить запрос</button>
+      </form>
+
+      <div id="form-ok" hidden class="form" style="text-align:center">
+        <div style="font-size:40px">✅</div>
+        <h3 class="mt16">Запрос отправлен</h3>
+        <p class="muted mt8">Это демонстрация работы формы в прототипе. На готовом сайте запрос уйдёт ответственному менеджеру по выбранному типу вагона.</p>
+      </div>
+
+      <div>
+        <div class="card">
+          <h3>Предпочитаете почту?</h3>
+          <p class="muted mt8">Напишите на общий адрес для запросов — мы направим обращение нужному специалисту:</p>
+          <p class="mt16" style="font-size:18px"><a href="mailto:zayavka@taltektrans.pro">zayavka@taltektrans.pro</a></p>
+          <div class="note compact">Один «красивый» адрес вместо трёх технических. Внутри он маршрутизируется по типу вагона. Финальный адрес согласуем с клиентом.</div>
+        </div>
+        <div class="card mt24">
+          <h3>Горячая линия</h3>
+          <p class="mt8" style="font-size:20px;font-weight:800;color:var(--blue)">+7 (495) 900 10 95</p>
+          <p class="muted">Главный офис · Москва</p>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- КОММЕРЧЕСКИЙ ДЕПАРТАМЕНТ -->
+<section class="section-bg">
+  <div class="container">
+    <span class="eyebrow">Коммерческий департамент</span>
+    <h2>Заключить контракт на оказание услуг</h2>
+    <div class="note">Логика блока — как в ТЗ: телефон руководителя отдела → переход на менеджера. Состав и фото уточняются клиентом.</div>
+    <div class="grid g3 mt24">
+      <div class="person">
+        <div class="ava">ФОТО</div>
+        <div>
+          <div class="who">Алексей Бушинский</div>
+          <div class="role">Коммерческий директор</div>
+          <div class="links"><a href="tel:+79067272224">+7 906 727-22-24</a><br><a href="mailto:a.bushinskiy@taltektrans.biz">a.bushinskiy@taltektrans.biz</a></div>
+        </div>
+      </div>
+      <div class="person">
+        <div class="ava">ФОТО</div>
+        <div>
+          <div class="who">Анастасия Афанасьева</div>
+          <div class="role">Руководитель департамента</div>
+          <div class="links"><a href="tel:+79266691956">+7 926 669-19-56</a><br><a href="mailto:a.afanaseva@taltektrans.biz">a.afanaseva@taltektrans.biz</a></div>
+        </div>
+      </div>
+      <div class="person">
+        <div class="ava">ФОТО</div>
+        <div>
+          <div class="who">Вячеслав Коркишко</div>
+          <div class="role">Начальник отдела</div>
+          <div class="links"><a href="tel:+79256468420">+7 925 646-84-20</a><br><a href="mailto:v.korkishko@taltektrans.biz">v.korkishko@taltektrans.biz</a></div>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ДИСПЕТЧЕРЫ -->
+<section>
+  <div class="container">
+    <span class="eyebrow">Диспетчерская служба</span>
+    <h2>Диспетчеры по направлениям</h2>
+    <p class="lead mt16 narrow">Сопровождают перевозку в реальном времени: статус и местонахождение вагонов, сроки прибытия груза.</p>
+    <div class="grid g2 mt24">
+      <div class="card">
+        <h3>Москва</h3>
+        <p class="muted">Режим работы: с 8:00 до 20:00 (МСК)</p>
+        <p class="mt16" style="font-weight:700;color:var(--blue)"><a href="#" data-stub="Телефон диспетчера — уточняется у клиента.">+7 ___ ___ __ __ · уточняется</a></p>
+      </div>
+      <div class="card">
+        <h3>Санкт-Петербург</h3>
+        <p class="muted">Режим работы: уточняется</p>
+        <p class="mt16" style="font-weight:700;color:var(--blue)"><a href="#" data-stub="Телефон диспетчера — уточняется у клиента.">+7 ___ ___ __ __ · уточняется</a></p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ОФИСЫ -->
+<section class="section-bg">
+  <div class="container">
+    <span class="eyebrow">Офисы и представительства</span>
+    <h2>Где мы есть</h2>
+    <div class="offices mt40">
+      <div class="office main"><div class="city">Москва · главный офис</div><div class="tel"><a href="tel:+74959001095">+7 (495) 900 10 95</a></div></div>
+      <div class="office"><div class="city">Санкт-Петербург</div><div class="tel"><a href="tel:+78126021475">+7 (812) 602 14 75</a></div></div>
+      <div class="office"><div class="city">Новокузнецк</div><div class="tel"><a href="tel:+73843993481">+7 (384) 399 34 81</a></div></div>
+      <div class="office"><div class="city">Иркутск</div><div class="tel"><a href="tel:+79086611771">+7 (908) 661 17 71</a></div></div>
+      <div class="office"><div class="city">Бийск</div><div class="tel"><a href="tel:+79069268009">+7 (906) 926 80 09</a></div></div>
+      <div class="office"><div class="city">Новосибирск</div><div class="tel"><a href="tel:+79315433710">+7 (931) 543 37 10</a></div></div>
+    </div>
+    <div class="ph ratio-16x9 mt40"><div class="ico">🗺</div><div class="tag">ПЛЕЙСХОЛДЕР · карта офисов</div><div class="sub">метки 6 городов · карта главного офиса в Москве</div></div>
+    <div class="note">Текущий сайт — taltektrans.biz. Новый домен проекта — <b>taltektrans.pro</b>. Реквизиты юрлица добавить в подвал/отдельный блок.</div>
+  </div>
+</section>
+
+<footer class="footer">
+  <div class="container">
+    <div class="cols">
+      <div>
+        <a class="brand" href="index.html" style="color:#fff"><svg class="mark" viewBox="0 0 48 40" aria-hidden="true"><polygon points="24,1 47,39 1,39" fill="#9DAABC"/><polygon points="24,12 38,39 10,39" fill="#2E7BD6"/><rect x="18" y="30" width="12" height="9" fill="#0A1F44"/></svg><span class="wm">ТАЛТЭК<small>ТРАНС</small></span></a>
+        <p style="margin-top:16px;max-width:280px">Железнодорожный оператор Группы компаний ТАЛТЭК. Перевозка промышленных и аграрных грузов.</p>
+      </div>
+      <div><h4>Разделы</h4><a href="index.html">Главная</a><a href="about.html">О компании</a><a href="services.html">Услуги и подвижной состав</a><a href="contacts.html">Контакты</a></div>
+      <div><h4>Контакты</h4><a href="tel:+74959001095">+7 (495) 900 10 95</a><a href="mailto:zayavka@taltektrans.pro">zayavka@taltektrans.pro</a><a href="contacts.html#form">Оставить запрос</a></div>
+      <div><h4>Личный кабинет</h4><a href="#" data-stub="Личный кабинет — в стадии разработки.">Вход <span class="badge">в разработке</span></a><p style="margin-top:10px;font-size:13px">Новый домен проекта — <b style="color:#fff">.pro</b></p></div>
+    </div>
+    <div class="bottom"><span>© 2026 АО «ТалТЭК Транс». Прототип сайта.</span><span>taltektrans.pro</span></div>
+  </div>
+</footer>
+
+<script src="assets/script.js"></script>
+</body>
+</html>
