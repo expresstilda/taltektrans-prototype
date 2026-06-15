@@ -119,6 +119,14 @@ h3{font-size:22px}
 .card ul li::before{content:"✓";position:absolute;left:0;color:var(--blue);font-weight:800}
 .tile-soft{background:var(--bg);border-color:transparent}
 
+/* ---------- Маршрут «под ключ» (route) ---------- */
+.route{display:grid;grid-template-columns:repeat(3,1fr);gap:38px 46px;counter-reset:r;margin-top:44px}
+.rstep{position:relative}
+.rstep::before{counter-increment:r;content:counter(r,decimal-leading-zero);display:flex;align-items:center;justify-content:center;width:46px;height:46px;border-radius:50%;background:#fff;border:2px solid var(--blue);color:var(--blue);font-weight:800;font-size:15px;margin-bottom:16px}
+.rstep .rtitle{color:var(--blue);font-weight:800;font-size:18px;line-height:1.25;margin-bottom:8px}
+.rstep .rdesc{color:var(--muted);font-size:15px}
+.rstep:not(:nth-child(3n)):not(:last-child)::after{content:"▸";position:absolute;top:11px;right:-30px;color:#9db3d0;font-size:18px;letter-spacing:-2px;text-shadow:-7px 0 #9db3d0,-14px 0 #9db3d0}
+
 .section-bg{background:var(--bg)}
 .section-navy{background:linear-gradient(120deg,var(--navy),var(--navy-2));color:#fff}
 .section-navy h2,.section-navy h3{color:#fff}
@@ -218,12 +226,13 @@ h3{font-size:22px}
   .nav.open{display:flex}
   .burger{display:flex;margin-left:auto}
   .header .tools .lang{display:none}
-  .g3,.g4,.vagons,.steps,.offices,.stats{grid-template-columns:repeat(2,1fr)}
+  .g3,.g4,.vagons,.steps,.offices,.stats,.route{grid-template-columns:repeat(2,1fr)}
   .fleet,.form-wrap{grid-template-columns:1fr}
+  .rstep::after{display:none}
 }
 @media(max-width:620px){
   section{padding:52px 0}
-  .g2,.g3,.g4,.vagons,.steps,.offices,.stats,.f2{grid-template-columns:1fr}
+  .g2,.g3,.g4,.vagons,.steps,.offices,.stats,.f2,.route{grid-template-columns:1fr}
   .cta-band{padding:30px}
   .footer .cols{grid-template-columns:1fr 1fr}
   .hero .inner{padding:72px 0 64px}
