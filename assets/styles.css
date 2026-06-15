@@ -120,9 +120,8 @@ h3{font-size:22px}
 .tile-soft{background:var(--bg);border-color:transparent}
 
 /* ---------- Маршрут «под ключ» (route) ---------- */
-.route{display:grid;grid-template-columns:repeat(3,1fr);gap:38px 46px;counter-reset:r;margin-top:44px}
-.rstep{position:relative}
-.rstep::before{counter-increment:r;content:counter(r,decimal-leading-zero);display:flex;align-items:center;justify-content:center;width:46px;height:46px;border-radius:50%;background:#fff;border:2px solid var(--blue);color:var(--blue);font-weight:800;font-size:15px;margin-bottom:16px}
+.route{display:grid;grid-template-columns:repeat(3,1fr);gap:38px 46px;margin-top:44px}
+.rstep{position:relative;padding-top:18px;border-top:2px solid var(--blue)}
 .rstep .rtitle{color:var(--blue);font-weight:800;font-size:18px;line-height:1.25;margin-bottom:8px}
 .rstep .rdesc{color:var(--muted);font-size:15px}
 .rstep:not(:nth-child(3n)):not(:last-child)::after{content:"▸";position:absolute;top:11px;right:-30px;color:#9db3d0;font-size:18px;letter-spacing:-2px;text-shadow:-7px 0 #9db3d0,-14px 0 #9db3d0}
