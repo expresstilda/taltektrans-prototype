@@ -93,7 +93,7 @@ h3{font-size:22px}
 .hero-cap{position:absolute;top:14px;left:50%;transform:translateX(-50%);z-index:3;max-width:90%;text-align:center;font-size:12px;font-weight:600;letter-spacing:.03em;color:#bcd4f2;background:rgba(8,24,54,.55);border:1px solid rgba(255,255,255,.18);padding:7px 16px;border-radius:30px}
 .hero .inner{position:relative;z-index:2;padding:104px 0 96px;max-width:760px}
 .hero .ribbon{display:inline-block;font-size:14px;font-weight:700;letter-spacing:.02em;background:rgba(255,255,255,.12);border:1px solid rgba(255,255,255,.25);padding:8px 16px;border-radius:40px;margin-bottom:22px}
-.hero h1{color:#fff}
+.hero h1{color:#fff;font-size:clamp(28px,3.6vw,44px)}
 .hero p{font-size:clamp(17px,2vw,21px);color:#d6e2f4;margin-top:18px;max-width:600px}
 .hero .cta{display:flex;gap:14px;flex-wrap:wrap;margin-top:34px}
 .hero .media-note{position:absolute;right:20px;bottom:16px;z-index:3;font-size:12px;color:#a9c2e6;background:rgba(8,24,54,.6);padding:6px 12px;border-radius:8px;border:1px solid rgba(255,255,255,.15)}
