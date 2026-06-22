@@ -30,7 +30,7 @@ h1{font-size:clamp(32px,5vw,56px)}
 h2{font-size:clamp(26px,3.4vw,40px)}
 h3{font-size:22px}
 .lead{font-size:clamp(18px,2vw,22px);color:var(--muted);font-weight:400}
-.eyebrow{display:inline-block;font-size:13px;font-weight:700;letter-spacing:.14em;text-transform:uppercase;color:var(--blue);margin-bottom:14px}
+.eyebrow{display:none}
 .muted{color:var(--muted)}
 .center{text-align:center}
 .narrow{max-width:760px}
@@ -124,7 +124,6 @@ h3{font-size:22px}
 .rstep{position:relative;padding-top:18px;border-top:2px solid var(--blue)}
 .rstep .rtitle{color:var(--blue);font-weight:800;font-size:18px;line-height:1.25;margin-bottom:8px}
 .rstep .rdesc{color:var(--muted);font-size:15px}
-.rstep:not(:nth-child(3n)):not(:last-child)::after{content:"▸";position:absolute;top:11px;right:-30px;color:#9db3d0;font-size:18px;letter-spacing:-2px;text-shadow:-7px 0 #9db3d0,-14px 0 #9db3d0}
 
 .section-bg{background:var(--bg)}
 .section-navy{background:linear-gradient(120deg,var(--navy),var(--navy-2));color:#fff}
